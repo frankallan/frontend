@@ -1,0 +1,11 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+    - docker build -t frankallan7/travis/frontend -f Dockerfile.dev . 
+
+script:
+    - docker run frankallan7/travis/frontend npm run test -- --coverage
+    
+    
