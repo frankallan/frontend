@@ -9,7 +9,7 @@ script:
     - docker run frankallan7/travis/frontend npm run test -- --coverage
 
 deploy:
-  provider: elsaticbeanstalk
+  provider: elasticbeanstalk
   region: "us-west-2"
   app: "docker"
   env: "devo"
